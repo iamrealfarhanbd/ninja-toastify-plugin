@@ -1,0 +1,19 @@
+{
+  "name": "WP-React-Toastify",
+  "version": "1.0.0",
+  "description": "WP React Toastify is a WordPress plugin that integrates the Toastify library with React to provide a simple way to display toast notifications on your website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^22.5.0"
+  },
+  "dependencies": {
+    "toastify-js": "^1.12.0"
+  }
+}
