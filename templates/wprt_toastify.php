@@ -4,8 +4,8 @@
 function wprt_toastify($atts) {
     $a = shortcode_atts( array(
         'id' => 'new-toast',
-        'btnName'=>'Try This Button',
         'message' => 'This is a toast',
+        'button_name'=>'try it',
         'duration' => 3000,
         'url' => 'https://github.com/apvarun/toastify-js',
         'newWindow' => true,
@@ -18,7 +18,7 @@ function wprt_toastify($atts) {
     ), $atts );
 
     ob_start(); ?>
-    <a href="#" id="<?php echo esc_attr($a['id']); ?>" class="button"><?php echo esc_attr($a['btnName']); ?></a>
+    <a  id="<?php echo esc_attr($a['id']); ?>" class="button"><?php  echo  esc_attr($a['button_name']) ; ?></a>
     <script>
         jQuery("#<?php echo esc_attr($a['id']); ?>").on("click", function() {
             Toastify({
