@@ -43,7 +43,7 @@ function wprt_toastify($atts) {
     $content = ob_get_clean();
     return $content;
 };
-add_shortcode('toastify', 'wprt_toastify');
+add_shortcode('wp_react_toastify', 'wprt_toastify');
     
 
 ?>

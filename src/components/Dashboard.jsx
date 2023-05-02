@@ -1,65 +1,61 @@
 import React from 'react'
+import { Col, Container, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-const Dashboard = () => {
-    return (
-<Card>
-      <Card.Header>Featured</Card.Header>
-      <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
-        <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-        // <div className='wprt_dashboard'>
-        //     <div className="card">
-        //         <h3>Example One</h3>
-        //         <br/>
-        //         This will display a toast with the message "Hello farhan!!!"  <br/>
-        //         in a container with ID "my-toast" for 5 seconds, positioned at the top right corner of the screen with a red to orange gradient background.
-        //         <br/>
-        //         <br/>
-        //         <b>Usage:</b>
-        //         <br/> <br/>
-        //         <code>[toastify id="my-toast" btnName="try me" message="Hello farhan!!!" duration="5000" gravity="top" position="right" background="linear-gradient(to right, #ff416c, #ff4b2b)"]</code>
-        //         <br/> <br/>
-        //         <b>Attributes:</b>
-        //         <br/> <br/>
-        //         <ul>
-        //             <li>id: the ID of the toast container (required)</li>
-        //             <li>imessage: the message to display in the toast (required)</li>
-        //             <li>duration: the duration of the toast in milliseconds (optional, default is 3000)</li>
-        //             <li>gravity: the gravity of the toast container (optional, default is "top")</li>
-        //             <li>position: the position of the toast container (optional, default is "right")</li>
-        //             <li>background: the background color of the toast container (optional, default is "linear-gradient(to right, #00b09b, #96c93d)")</li>
-        //         </ul>
-        //     </div>
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
+import CardGroup from 'react-bootstrap/CardGroup';
 
-        //     <div className="card">
-        //         <h3>Example One</h3>
-        //         <br/>
-        //         This will display a toast with the message "Hello farhan!!!"  <br/>
-        //         in a container with ID "my-toast" for 5 seconds, positioned at the top right corner of the screen with a red to orange gradient background.
-        //         <br/>
-        //         <br/>
-        //         <b>Usage:</b>
-        //         <br/> <br/>
-        //         <code>[toastify id="my-toast" btnName="try me" message="Hello farhan!!!" duration="5000" gravity="top" position="right" background="linear-gradient(to right, #ff416c, #ff4b2b)"]</code>
-        //         <br/> <br/>
-        //         <b>Attributes:</b>
-        //         <br/> <br/>
-        //         <ul>
-        //             <li>id: the ID of the toast container (required)</li>
-        //             <li>imessage: the message to display in the toast (required)</li>
-        //             <li>duration: the duration of the toast in milliseconds (optional, default is 3000)</li>
-        //             <li>gravity: the gravity of the toast container (optional, default is "top")</li>
-        //             <li>position: the position of the toast container (optional, default is "right")</li>
-        //             <li>background: the background color of the toast container (optional, default is "linear-gradient(to right, #00b09b, #96c93d)")</li>
-        //         </ul>
-        //     </div>
-        // </div>
+const Dashboard = () => {
+   const wprt_btn = ()=>{
+    Toastify({
+        text: "Hello farhan!!!",
+        duration: 5000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #ff416c, #ff4b2b)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+    }        
+    return (
+        <Container>
+        <Row >
+            <Col>
+      <Card border="primary" className='p-0'>
+            <Card.Header as="h5" className='text-center'>
+                Demo 
+            </Card.Header>
+            <Card.Body>
+                    <Card.Text>
+                        <p>Click the button below to see the toast message:</p>
+                     
+                        <a id="my-toast" className="button" onClick={() => wprt_btn()}>Try me!!</a>
+                        <br/>
+                        <br/>
+                        <Card.Text as="h6">You can customize the shortcode by changing the below attributes:</Card.Text>
+                                <b>id: my-toast </b> ,
+                                <b>button_name: Try me!!</b> ,
+                                <b>message: Hello farhan!!!</b> ,
+                                <b>duration: 5000</b> ,
+                                <b>gravity: top</b> ,
+                                <b>position: right</b> ,
+                                <b>background: linear-gradient(to right, #ff416c, #ff4b2b)</b> 
+                     
+                        <strong>Shortcode:</strong>
+                         <br/>
+                         <code>[wp_react_toastify id="my-toast" button_name="Try me!!" message="Hello farhan!!!" duration="5000" gravity="top" position="right" background="linear-gradient(to right, #ff416c, #ff4b2b)"]</code>
+                    </Card.Text>
+            </Card.Body>
+            </Card>
+            </Col>
+        </Row>
+      </Container>
      );
 }
 

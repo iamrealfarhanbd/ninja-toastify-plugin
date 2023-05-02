@@ -1,11 +1,14 @@
 import React from 'react';
+import { Alert, Card } from 'react-bootstrap';
 import Dashboard from './components/Dashboard';
 
 const App = () => {
     return (
         <div>
-            <h2 className='app-title'>wp react toastify App</h2>
-            <hr />
+            <Alert variant="warning" className='text-center'>
+            <Card.Header as="h2">WP React Toastify</Card.Header>
+            </Alert>
+         
             <Dashboard />
         </div>
      );
