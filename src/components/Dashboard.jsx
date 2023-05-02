@@ -35,7 +35,7 @@ const Dashboard = () => {
                     <Card.Text>
                         <p>Click the button below to see the toast message:</p>
                      
-                        <a id="my-toast" className="button" onClick={() => wprt_btn()}>Try me!!</a>
+                        <a id="my-toast" className="button" onClick={() => wprt_btn()} style={{fontSize:"14px", background: "red" ,padding: '4px 20px',color: "white",textDecoration: "none"}}>Try me!!</a>
                         <br/>
                         <br/>
                         <Card.Text as="h6">You can customize the shortcode by changing the below attributes:</Card.Text>
@@ -46,10 +46,15 @@ const Dashboard = () => {
                                 <b>gravity: top</b> ,
                                 <b>position: right</b> ,
                                 <b>background: linear-gradient(to right, #ff416c, #ff4b2b)</b> 
-                     
+                                <b>button_font_size: 14px</b> ,
+                                <b>button_background: red</b> 
+                                <b>button_color: white</b> ,
+                                <b>button_padding: 4px 20px</b> 
+                                <br/>
+                                <br/>
                         <strong>Shortcode:</strong>
                          <br/>
-                         <code>[wp_react_toastify id="my-toast" button_name="Try me!!" message="Hello farhan!!!" duration="5000" gravity="top" position="right" background="linear-gradient(to right, #ff416c, #ff4b2b)"]</code>
+                         <code>[wp_react_toastify id="my-toast" button_name="Try me!!" message="Hello farhan!!!" duration="5000" gravity="top" position="right" background="linear-gradient(to right, #ff416c, #ff4b2b)" button_font_size="14px" button_background="red" button_color="white" button_padding="14px 20px"]</code>
                     </Card.Text>
             </Card.Body>
             </Card>

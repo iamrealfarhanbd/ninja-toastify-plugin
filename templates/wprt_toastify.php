@@ -5,7 +5,11 @@ function wprt_toastify($atts) {
     $a = shortcode_atts( array(
         'id' => 'new-toast',
         'message' => 'This is a toast',
+        'button_font_size'=>'14px',
+        'button_background'=>'red',
         'button_name'=>'try it',
+        'button_color'=>'white',
+        'button_padding'=>'4px 20px',
         'duration' => 3000,
         'url' => 'https://github.com/apvarun/toastify-js',
         'newWindow' => true,
@@ -18,7 +22,7 @@ function wprt_toastify($atts) {
     ), $atts );
 
     ob_start(); ?>
-    <a  id="<?php echo esc_attr($a['id']); ?>" class="button"><?php  echo  esc_attr($a['button_name']) ; ?></a>
+    <a  id="<?php echo esc_attr($a['id']); ?>" class="button" style="font-size:<?php echo esc_attr($a['button_font_size']); ?>; background: <?php echo esc_attr($a['button_background']); ?> ;padding: <?php echo esc_attr($a['button_padding']); ?>;color: <?php echo esc_attr($a['button_color']); ?>;text-decoration: none;"><?php  echo  esc_attr($a['button_name']) ;?></a>
     <script>
         jQuery("#<?php echo esc_attr($a['id']); ?>").on("click", function() {
             Toastify({
