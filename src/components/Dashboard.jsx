@@ -11,12 +11,26 @@ const Dashboard = () => {
     return (
         <div className='dashboard'>
             <div className="card">
-                <h3>Dashboard</h3>
-                <p>
-                    Edit Dashboard component at <code>src/components/Dashboard.jsx</code>
-                </p>
-                <button onClick={handleClick}>Click Me</button>
-                {/* <ToastContainer /> */}
+                <h3>Example One</h3>
+                <br/>
+                This will display a toast with the message "Hello farhan's world!"  <br/>
+                in a container with ID "my-toast" for 5 seconds, positioned at the top right corner of the screen with a red to orange gradient background.
+                <br/>
+                <br/>
+                <b>Usage:</b>
+                <br/> <br/>
+                <code>[toastify id="my-toast" message="Hello farhan's world!" duration="5000" gravity="top" position="right" background="linear-gradient(to right, #ff416c, #ff4b2b)"]</code>
+                <br/> <br/>
+                <b>Attributes:</b>
+                <br/> <br/>
+                <ul>
+                    <li>id: the ID of the toast container (required)</li>
+                    <li>imessage: the message to display in the toast (required)</li>
+                    <li>duration: the duration of the toast in milliseconds (optional, default is 3000)</li>
+                    <li>gravity: the gravity of the toast container (optional, default is "top")</li>
+                    <li>position: the position of the toast container (optional, default is "right")</li>
+                    <li>background: the background color of the toast container (optional, default is "linear-gradient(to right, #00b09b, #96c93d)")</li>
+                </ul>
             </div>
         </div>
      );
