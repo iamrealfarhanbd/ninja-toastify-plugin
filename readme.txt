@@ -1,7 +1,7 @@
 === WP React Toastify ===
 
 Contributors: Farhan Ahmed
-Tags: react, toastify, notifications, shortcode, alart, notify
+Tags: react, toastify, notifications, shortcode, alart, notify, ninja notify
 Donate link: https://www.buymeacoffee.com/iamfarhan
 Requires at least: 5.2
 Tested up to: 6.2
