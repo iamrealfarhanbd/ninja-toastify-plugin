@@ -1,14 +1,19 @@
-<?php 
+<?php
 
+/**
+ * wprt_toastify function return the toastify notification
+ *
+ * @return void
+ */
 
 function wprt_toastify($atts) {
     $a = shortcode_atts( array(
         'id' => 'new-toast',
-        'message' => 'This is a toast',
+        'message' => 'Thank You for using WP React Toastify!',
         'button_font_size'=>'14px',
-        'button_background'=>'red',
+        'button_background'=>'#161616',
         'button_name'=>'try it',
-        'button_color'=>'white',
+        'button_color'=>'#FFFFFF',
         'button_padding'=>'4px 20px',
         'duration' => 3000,
         'url' => 'https://github.com/apvarun/toastify-js',
@@ -47,6 +52,13 @@ function wprt_toastify($atts) {
     $content = ob_get_clean();
     return $content;
 };
+
+/**
+ * Generating the shortcode for above function
+ *
+ * @return void
+ */
+
 add_shortcode('wp_react_toastify', 'wprt_toastify');
     
 

@@ -19,12 +19,6 @@ Upload the wp-react-toastify folder to the /wp-content/plugins/ directory
 Activate the plugin through the 'Plugins' menu in WordPress
 Use the shortcode [wp_react_toastify] to display the toast notification on your website.
 
-= Minimum Requirements =
-
-* WordPress 4.5 or greater
-* PHP version 5.6 or greater
-* MySQL version 5.0 or greater
-
 == Frequently Asked Questions ==
 
 = How can I customize the notification appearance? =
@@ -42,5 +36,5 @@ Yes, the React Toastify library allows you to display multiple notifications at 
 Initial release
 == Upgrade Notice ==
 
-= 1.0 =
+= 1.0.0 =
 Initial release of WP React Toastify.

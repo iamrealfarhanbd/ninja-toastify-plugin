@@ -14,29 +14,10 @@ Text Domain: wprt
 Domain Path: /languages
 */
 
-
-/**
- * @package Akismet
- */
-/*
-Plugin Name: Akismet Anti-Spam
-Plugin URI: https://akismet.com/
-Description: Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. It keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key.
-Version: 5.0.1
-Requires at least: 5.0
-Requires PHP: 5.2
-Author: Automattic
-Author URI: https://automattic.com/wordpress-plugins/
-License: GPLv2 or later
-Text Domain: akismet
-*/
-
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
     die;
 }
-
-
 
 /**
  * My All Shortcode files.
@@ -67,8 +48,6 @@ function wprt_admin_page() {
     require_once plugin_dir_path( __FILE__ ) . 'templates/wprt_app.php';
 }
 
-
-
 /**
  * Enqueue scripts and styles.
  *
@@ -85,3 +64,4 @@ function wprt_admin_enqueue_scripts() {
     wp_enqueue_script( 'wprt-script', plugin_dir_url( __FILE__ ) . 'build/index.js', array( 'wp-element' ), '1.0.0', true );
     wp_enqueue_script( 'wprt-toastify-min-js', 'https://cdn.jsdelivr.net/npm/toastify-js', array(), '1.0.1', true );
 }
+?>
