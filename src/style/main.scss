@@ -6,17 +6,37 @@
     }
 
     #wprt_dashboard {
-        b {
-            background: #a92365;
-            color: white;
-            padding: 2px 5px;
-            font-size: 10px;
+        li {
+                color: #ffffff;
+                padding: 4px 5px;
+                font-size: 14px;
+                list-style: inside;
+                font-weight: 700;
+                line-height: 9px;
+            
         }
 
-        span {
-            display: flex;
-            flex-wrap: wrap;
+        ul {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        .wprt_section {
+
+            background: #102C3B;
+            color: #ffffff;
             align-items: center;
+            border-radius: 10px;
+            padding: 15px 10px;
+            margin-bottom: 20px;
+            .wprt_div{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        code {
+            font-size: 13px;
+            color: #102c3c;
+            word-wrap: break-word;
         }
     }
 }

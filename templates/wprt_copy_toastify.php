@@ -1,40 +1,44 @@
 <?php
 
 /**
- * wprt_toastify function return the toastify notification
+ * wprt_toastify_copied function return the toastify notification and copy the text
  *
  * @return void
  */
 
-function wprt_toastify($atts) {
+function wprt_toastify_copied($atts, $content = null) {
     $a = shortcode_atts( array(
-        'id' => 'wprt_toast',
-        'message' => 'Thank You for using WP React Toastify!',
+        'id' => 'wprt_toast_copied',
+        'message' => 'Text copied!',
         'button_font_size'=>'14px',
-        'button_background'=>'llinear-gradient(to right, rgb(16 44 60), rgb(0, 148, 255))',
+        'button_background'=>'linear-gradient(to right, rgb(16 44 60), rgb(0, 148, 255))',
         'button_name'=>'try it',
         'button_color'=>'#FFFFFF',
         'button_padding'=>'4px 20px',
         'duration' => 3000,
-        'destination_url' => 'https://github.com/iamrealfarhanbd/wp-react-tostify-plugin',
-        'newWindow' => "true",
-        'close' => "true",
+        'close' => 'true',
         'gravity' => 'top',
         'position' => 'right',
         'stopOnFocus' => "true",
-        'background' => 'linear-gradient(to right, #00b09b, #96c93d)',
+        'background' => 'linear-gradient(to right, rgb(16 44 60), rgb(0, 148, 255))',
         'onClick' => ''
     ), $atts );
 
     ob_start(); ?>
-    <a  id="<?php echo esc_attr($a['id']); ?>" class="button" style="font-size:<?php echo esc_attr($a['button_font_size']); ?>; background: <?php echo esc_attr($a['button_background']); ?> ;padding: <?php echo esc_attr($a['button_padding']); ?>;color: <?php echo esc_attr($a['button_color']); ?>;text-decoration: none;"><?php  echo  esc_attr($a['button_name']) ;?></a>
+    <button id="<?php echo esc_attr($a['id']); ?>" class="button" style="font-size:<?php echo esc_attr($a['button_font_size']); ?>; background: <?php echo esc_attr($a['button_background']); ?> ;padding: <?php echo esc_attr($a['button_padding']); ?>;color: <?php echo esc_attr($a['button_color']); ?>;text-decoration: none;"><?php echo esc_html($content); ?></button>
     <script>
         jQuery("#<?php echo esc_attr($a['id']); ?>").on("click", function() {
+            var textToCopy = "<?php echo esc_js($content); ?>";
+            var dummyElement = document.createElement("textarea");
+            dummyElement.value = textToCopy;
+            document.body.appendChild(dummyElement);
+            dummyElement.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummyElement);
+
             Toastify({
                 text: "<?php echo esc_js($a['message']); ?>",
                 duration: <?php echo esc_js($a['duration']); ?>,
-                destination: "<?php echo esc_js($a['destination_url']); ?>",
-                newWindow: <?php echo esc_js($a['newWindow']); ?>,
                 close: <?php echo esc_js($a['close']); ?>,
                 gravity: "<?php echo esc_js($a['gravity']); ?>",
                 position: "<?php echo esc_js($a['position']); ?>",
@@ -59,7 +63,7 @@ function wprt_toastify($atts) {
  * @return void
  */
 
-add_shortcode('wp_react_toastify', 'wprt_toastify');
+add_shortcode('wp_react_toastify_copied', 'wprt_toastify_copied');
     
 
 ?>

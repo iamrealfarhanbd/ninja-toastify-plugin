@@ -8,31 +8,89 @@ import CardGroup from "react-bootstrap/CardGroup";
 
 /*
  * This componet will render the plugin dashboard
-*/
+ */
 const Dashboard = () => {
   // this function return the toastify for demo
   const wprt_btn = () => {
     Toastify({
       text: `Thank You for using WP React Toastify!`,
       duration: 5000,
-      destination: "https://github.com/apvarun/toastify-js",
+      destination: "https://www.buymeacoffee.com/iamfarhan",
       newWindow: true,
       close: true,
       gravity: "top", // `top` or `bottom`
       position: "right", // `left`, `center` or `right`
       stopOnFocus: true, // Prevents dismissing of toast on hover
       style: {
-        background: "linear-gradient(to right, #ff416c, #ff4b2b)",
+        background: "linear-gradient(to right, #ff416c, #0094FF)",
+      },
+      callback: function () {
+        window.location.href =
+          "https://github.com/iamrealfarhanbd/wp-react-tostify-plugin ";
+      },
+      onClick: function () {}, // Callback after click
+    }).showToast();
+  };
+  const wprt_btn_copied = () => {
+        var textToCopy = "Click To Copy";
+        var dummyElement = document.createElement("textarea");
+        dummyElement.value = textToCopy;
+        document.body.appendChild(dummyElement);
+        dummyElement.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummyElement);
+
+    Toastify({
+      text: `Thank You for using WP React Toastify!`,
+      duration: 5000,
+      destination: "https://www.buymeacoffee.com/iamfarhan",
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to right, #ff4b2b, #102C3B)",
+      },
+      callback: function () {
+        window.location.href =
+          "https://github.com/iamrealfarhanbd/wp-react-tostify-plugin ";
       },
       onClick: function () {}, // Callback after click
     }).showToast();
   };
   return (
     <Container id="wprt_dashboard">
+         <section className="wprt_section">
+         <Card.Text as="h6" className="mb-3">
+                You can customize the shortcode by using the below
+                attributes:
+              </Card.Text>
+              <div className="wprt_div">
+                <ul>
+                  <li>id: wprt_toast </li> <li>button_name: Try me!!</li>
+                  <li>message: Thank You for using WP React Toastify!</li>
+                  <li>duration: 5000</li>
+                  <li>gravity: top</li> <li>position: right</li>
+                </ul>
+                <ul>
+                <li>
+                    background: linear-gradient(to right, #ff416c, #ff4b2b)
+                  </li>
+                  <li>button_font_size: 14px</li>
+                <li>button_background: #3dd28d</li>
+                  <li>button_color: white</li> <li>button_padding: 4px 20px</li>
+                  <li>
+                    destination_url:
+                    https://github.com/iamrealfarhanbd/wp-react-tostify-plugin
+                  </li>
+                </ul>
+                </div>
+              </section>
       <Row>
         <Col>
-          <Card border="warning" className="p-0">
-            <Card.Header as="h5" className="text-center bg-warning text-white">
+          <Card border="warning" className="p-0 mw-100" >
+            <Card.Header as="h5" className="text-center text-white" style={{background: "#102C3B"}}>
               Demo
             </Card.Header>
             <Card.Body>
@@ -44,42 +102,62 @@ const Dashboard = () => {
                   onClick={() => wprt_btn()}
                   style={{
                     fontSize: "14px",
-                    background: " #161616",
+                    background: "linear-gradient(to right, rgb(16 44 60), rgb(0, 148, 255))",
                     padding: "4px 20px",
                     color: "#FFFFFF",
                     borderRadius: "36px",
                     textDecoration: "none",
-                    width: "100%",
+                    width: "20%",
                     textAlign: " center",
                   }}
                 >
                   Try me!!
                 </a>
               </Card.Text>
-              <Card.Text as="h6">
-                You can customize the shortcode by changing the below
-                attributes:
-              </Card.Text>
-              <span>
-                <b>id: my-toast </b> ,<b>button_name: Try me!!</b> ,
-                <b>message: Hello farhan!!!</b> ,<b>duration: 5000</b> ,
-                <b>gravity: top</b> ,<b>position: right</b> ,
-                <b>background: linear-gradient(to right, #ff416c, #ff4b2b)</b>
-                <b>button_font_size: 14px</b> ,<b>button_background: #3dd28d</b>
-                <b>button_color: white</b> ,<b>button_padding: 4px 20px</b>
-              </span>
-              <br />
-
               <strong>Shortcode:</strong>
               <br />
+              <code>
+                [wp_react_toastify id="wprt_toast" button_name="Try me!!"
+                destination_url="https://github.com/iamrealfarhanbd/wp-react-tostify-plugin"
+                message="Thank You for using WP React Toastify! click me now"
+                duration="5000" gravity="top" position="right"
+                background="llinear-gradient(to right, rgb(16 44 60), rgb(0, 148, 255))"
+                button_font_size="14px" button_background="linear-gradient(to right, rgb(16 44 60), rgb(0, 148, 255))"
+                button_color="#FFFFFF" button_padding="4px 20px"]
+              </code>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col>
+          <Card border="warning" className="p-0 mw-100 ">
+            <Card.Header as="h5" className="text-center text-white" style={{background: "#102C3B"}}>
+              Demo
+            </Card.Header>
+            <Card.Body>
+              <Card.Text>
+                <p>Click the button below to see the toast message:</p>
+                <a
+                  id="my-toast"
+                  className="button"
+                  onClick={() => wprt_btn_copied()}
+                  style={{
+                    fontSize: "14px",
+                    background: "linear-gradient(to right, rgb(16 44 60), rgb(0, 148, 255))",
+                    padding: "4px 20px",
+                    color: "#FFFFFF",
+                    borderRadius: "36px",
+                    textDecoration: "none",
+                    textAlign: " center",
+                    border:0,
+                  }}
+                >
+                  Click To Copy
+                </a>
+              </Card.Text>
+              <strong>Shortcode:</strong>
               <br />
               <code>
-                [wp_react_toastify id="my-toast" button_name="Try me!!"
-                message="Thank You for using WP React Toastify!" duration="5000"
-                gravity="top" position="right" background="linear-gradient(to
-                right, #ff416c, #ff4b2b)" button_font_size="14px"
-                button_background="#161616" button_color="#FFFFFF"
-                button_padding="4px 20px"]
+              [wp_react_toastify_copied]  Click To Copy [/wp_react_toastify_copied]
               </code>
             </Card.Body>
           </Card>

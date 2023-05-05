@@ -26,6 +26,7 @@ if (!defined('WPINC')) {
  */
 
 include_once( plugin_dir_path( __FILE__ ) . 'templates/wprt_toastify.php' );
+include_once( plugin_dir_path( __FILE__ ) . 'templates/wprt_copy_toastify.php' );
 
 /**
  * Init Admin Menu.

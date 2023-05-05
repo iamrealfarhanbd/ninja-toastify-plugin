@@ -1,7 +1,7 @@
 === WP React Toastify ===
 
 Contributors: Farhan Ahmed
-Tags: react, toastify, notifications, shortcode, alart, notify, ninja notify
+Tags: toastify, notifications, shortcode, alart, ninja notify,clicktocopy,copytext
 Donate link: https://www.buymeacoffee.com/iamfarhan
 Requires at least: 5.2
 Tested up to: 6.2
@@ -11,7 +11,9 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-WP React Toastify is a WordPress plugin that allows you to easily display notifications on your website using the React Toastify library.
+WP React Toastify is a lightweight and customizable WordPress plugin that adds click-to-copy toasts to your website. With this plugin,
+you can easily create custom toasts with unique IDs and embed them into any page or post using a shortcode generator in the admin dashboard. 
+Your users can then click the copy button to quickly and easily share your content on social media or other platforms
 
 == Installation ==
 
