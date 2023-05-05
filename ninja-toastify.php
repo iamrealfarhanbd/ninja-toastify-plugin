@@ -36,7 +36,7 @@ include_once( plugin_dir_path( __FILE__ ) . 'templates/wprt_copy_toastify.php' )
 add_action( 'admin_menu', 'wprt_init_menu' );
 
 function wprt_init_menu() {
-    add_menu_page( __( 'Ninja Toastify', 'wprt'), __( 'Ninja Toastify', 'wprt'), 'manage_options', 'wprt', 'wprt_admin_page', 'dashicons-admin-post', '2.1' );
+    add_menu_page( __( 'Ninja Toastify', 'wprt'), __( 'Ninja Toastify', 'wprt'), 'manage_options', 'wprt', 'wprt_admin_page', plugin_dir_url( __FILE__ ) . 'assets/icon.png', '2.1' );
 }
 
 /**
