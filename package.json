@@ -1,7 +1,7 @@
 {
-  "name": "WP-React-Toastify",
+  "name": "ninja-toastify",
   "version": "1.0.0",
-  "description": "WP React Toastify is a WordPress plugin that integrates the Toastify library with React to provide a simple way to display toast notifications on your website.",
+  "description": "Ninja Toastify is a WordPress plugin that integrates the Toastify library with React to provide a simple way to display toast notifications on your website.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

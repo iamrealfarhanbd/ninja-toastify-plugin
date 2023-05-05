@@ -63,7 +63,7 @@ function wprt_toastify_copied($atts, $content = null) {
  * @return void
  */
 
-add_shortcode('wp_react_toastify_copied', 'wprt_toastify_copied');
+add_shortcode('ninja_toastify_copied', 'wprt_toastify_copied');
     
 
 ?>

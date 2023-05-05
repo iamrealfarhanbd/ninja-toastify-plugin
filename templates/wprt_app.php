@@ -5,7 +5,7 @@
  * @return void
  */
 ?>
-<div id="wp-react-toastify">
+<div id="ninja-toastify">
     <h2>Loading...</h2>
 </div>
 <?php

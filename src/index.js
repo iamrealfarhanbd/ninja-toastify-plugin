@@ -8,4 +8,4 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./style/main.scss";
 
 // Render the App component into the DOM
-render(<App />, document.getElementById("wp-react-toastify"));
+render(<App />, document.getElementById("ninja-toastify"));

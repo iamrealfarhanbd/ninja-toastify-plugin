@@ -9,7 +9,7 @@
 function wprt_toastify($atts) {
     $a = shortcode_atts( array(
         'id' => 'wprt_toast',
-        'message' => 'Thank You for using WP React Toastify!',
+        'message' => 'Thank You for using Ninja Toastify!',
         'button_font_size'=>'14px',
         'button_background'=>'llinear-gradient(to right, rgb(16 44 60), rgb(0, 148, 255))',
         'button_name'=>'try it',
@@ -59,7 +59,7 @@ function wprt_toastify($atts) {
  * @return void
  */
 
-add_shortcode('wp_react_toastify', 'wprt_toastify');
+add_shortcode('ninja_toastify', 'wprt_toastify');
     
 
 ?>

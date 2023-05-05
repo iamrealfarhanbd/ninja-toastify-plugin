@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: WP React Toastify
-Plugin URI: https://wordpress.org/plugins/wp-react-toastify/
-Description: WP React Toastify is a WordPress plugin that integrates the Toastify library with React to provide a simple way to display toast notifications on your website.
+Plugin Name: Ninja Toastify
+Plugin URI: https://wordpress.org/plugins/ninja-toastify/
+Description: Ninja Toastify is a WordPress plugin that integrates the Toastify library with React to provide a simple way to display toast notifications on your website.
 Version: 1.0.0
 Requires at least: 5.2
 Requires PHP: 7.2
@@ -36,7 +36,7 @@ include_once( plugin_dir_path( __FILE__ ) . 'templates/wprt_copy_toastify.php' )
 add_action( 'admin_menu', 'wprt_init_menu' );
 
 function wprt_init_menu() {
-    add_menu_page( __( 'WP React Toastify', 'wprt'), __( 'WP React Toastify', 'wprt'), 'manage_options', 'wprt', 'wprt_admin_page', 'dashicons-admin-post', '2.1' );
+    add_menu_page( __( 'Ninja Toastify', 'wprt'), __( 'Ninja Toastify', 'wprt'), 'manage_options', 'wprt', 'wprt_admin_page', 'dashicons-admin-post', '2.1' );
 }
 
 /**

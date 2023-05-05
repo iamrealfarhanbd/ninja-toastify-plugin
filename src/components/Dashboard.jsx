@@ -13,7 +13,7 @@ const Dashboard = () => {
   // this function return the toastify for demo
   const wprt_btn = () => {
     Toastify({
-      text: `Thank You for using WP React Toastify!`,
+      text: `Thank You for using Ninja Toastify!`,
       duration: 5000,
       destination: "https://www.buymeacoffee.com/iamfarhan",
       newWindow: true,
@@ -41,7 +41,7 @@ const Dashboard = () => {
         document.body.removeChild(dummyElement);
 
     Toastify({
-      text: `Thank You for using WP React Toastify!`,
+      text: `Thank You for using Ninja Toastify!`,
       duration: 5000,
       destination: "https://www.buymeacoffee.com/iamfarhan",
       newWindow: true,
@@ -69,7 +69,7 @@ const Dashboard = () => {
               <div className="wprt_div">
                 <ul>
                   <li>id: wprt_toast </li> <li>button_name: Try me!!</li>
-                  <li>message: Thank You for using WP React Toastify!</li>
+                  <li>message: Thank You for using Ninja Toastify!</li>
                   <li>duration: 5000</li>
                   <li>gravity: top</li> <li>position: right</li>
                 </ul>
@@ -117,9 +117,9 @@ const Dashboard = () => {
               <strong>Shortcode:</strong>
               <br />
               <code>
-                [wp_react_toastify id="wprt_toast" button_name="Try me!!"
+                [ninja_toastify id="wprt_toast" button_name="Try me!!"
                 destination_url="https://github.com/iamrealfarhanbd/wp-react-tostify-plugin"
-                message="Thank You for using WP React Toastify! click me now"
+                message="Thank You for using Ninja Toastify! click me now"
                 duration="5000" gravity="top" position="right"
                 background="llinear-gradient(to right, rgb(16 44 60), rgb(0, 148, 255))"
                 button_font_size="14px" button_background="linear-gradient(to right, rgb(16 44 60), rgb(0, 148, 255))"
@@ -157,7 +157,7 @@ const Dashboard = () => {
               <strong>Shortcode:</strong>
               <br />
               <code>
-              [wp_react_toastify_copied]  Click To Copy [/wp_react_toastify_copied]
+              [ninja_toastify_copied]  Click To Copy [/ninja_toastify_copied]
               </code>
             </Card.Body>
           </Card>

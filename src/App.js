@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div>
       <Alert variant="warning" className="text-center">
-        <Card.Header as="h2">WP React Toastify</Card.Header>
+        <Card.Header as="h2">Ninja Toastify</Card.Header>
       </Alert>
       <Dashboard />
     </div>
