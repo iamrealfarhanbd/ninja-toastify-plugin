@@ -61,6 +61,7 @@ add_action( 'admin_enqueue_scripts', 'wprt_admin_enqueue_scripts' );
 function wprt_admin_enqueue_scripts() {
     wp_enqueue_script('jquery');
     wp_enqueue_style( 'wprt-style', plugin_dir_url( __FILE__ ) . 'build/index.css' );
+    wp_enqueue_style( 'wprt-style-admin', plugin_dir_url( __FILE__ ) . 'assets/css/wprt_style.css' );
     wp_enqueue_style( 'wprt-toastify-min-css', 'https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css');
     wp_enqueue_script( 'wprt-script', plugin_dir_url( __FILE__ ) . 'build/index.js', array( 'wp-element' ), '1.0.0', true );
     wp_enqueue_script( 'wprt-toastify-min-js', 'https://cdn.jsdelivr.net/npm/toastify-js', array(), '1.0.1', true );
