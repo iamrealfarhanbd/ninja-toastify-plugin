@@ -57,7 +57,6 @@ function ntfy_admin_page() {
 add_action( 'wp_enqueue_scripts', 'ntfy_frontend_enqueue_scripts' );
 
 add_action( 'admin_enqueue_scripts', 'ntfy_admin_enqueue_scripts' );
-
 function ntfy_admin_enqueue_scripts() {
     if ( isset( $_GET['page'] ) && $_GET['page'] === 'ntfy' ) {
         wp_enqueue_script('jquery');
