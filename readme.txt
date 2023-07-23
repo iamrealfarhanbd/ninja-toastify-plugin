@@ -41,6 +41,5 @@ Initial release
 = 1.0.0 =
 Initial release of Ninja Toastify.
 
-## Contributors
-
-- Syed Zawad (UIUX Design)
+==  Credits == 
+- Syed Zawad (UIUX Design) - For designing the plugin banner and logo
