@@ -10,14 +10,13 @@ Author: Farhan Ahmed
 Author URI: https://github.com/iamrealfarhanbd
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
-Text Domain: wprt
+Text Domain: ninja-toastify
 Domain Path: /languages
 */
 
 // If this file is called directly, abort.
-if (!defined('WPINC')) {
-    die;
-}
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly      
+
 
 /**
  * My All Shortcode files.
@@ -25,18 +24,18 @@ if (!defined('WPINC')) {
  * @return void
  */
 
-include_once( plugin_dir_path( __FILE__ ) . 'templates/wprt_toastify.php' );
-include_once( plugin_dir_path( __FILE__ ) . 'templates/wprt_copy_toastify.php' );
+include_once( plugin_dir_path( __FILE__ ) . 'templates/ntfy_toastify.php' );
+include_once( plugin_dir_path( __FILE__ ) . 'templates/ntfy_copy_toastify.php' );
 
 /**
  * Init Admin Menu.
  *
  * @return void
  */
-add_action( 'admin_menu', 'wprt_init_menu' );
+add_action( 'admin_menu', 'ntfy_init_menu' );
 
-function wprt_init_menu() {
-    add_menu_page( __( 'Ninja Toastify', 'wprt'), __( 'Ninja Toastify', 'wprt'), 'manage_options', 'wprt', 'wprt_admin_page', plugin_dir_url( __FILE__ ) . 'assets/logo-min.png', '2.1' );
+function ntfy_init_menu() {
+    add_menu_page( __( 'Ninja Toastify', 'ntfy'), __( 'Ninja Toastify', 'ntfy'), 'manage_options', 'ntfy', 'ntfy_admin_page', plugin_dir_url( __FILE__ ) . 'assets/logo-min.png', '2.1' );
 }
 
 /**
@@ -45,8 +44,8 @@ function wprt_init_menu() {
  * @return void
  */
 
-function wprt_admin_page() {
-    require_once plugin_dir_path( __FILE__ ) . 'templates/wprt_app.php';
+function ntfy_admin_page() {
+    require_once plugin_dir_path( __FILE__ ) . 'templates/ntfy_app.php';
 }
 
 /**
@@ -55,15 +54,26 @@ function wprt_admin_page() {
  * @return void
  */
 
-add_action( 'wp_enqueue_scripts', 'wprt_admin_enqueue_scripts' );
-add_action( 'admin_enqueue_scripts', 'wprt_admin_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'ntfy_frontend_enqueue_scripts' );
 
-function wprt_admin_enqueue_scripts() {
-    wp_enqueue_script('jquery');
-    wp_enqueue_style( 'wprt-style', plugin_dir_url( __FILE__ ) . 'build/index.css' );
-    wp_enqueue_style( 'wprt-style-admin', plugin_dir_url( __FILE__ ) . 'assets/css/wprt_style.css' );
-    wp_enqueue_style( 'wprt-toastify-min-css', 'https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css');
-    wp_enqueue_script( 'wprt-script', plugin_dir_url( __FILE__ ) . 'build/index.js', array( 'wp-element' ), '1.0.0', true );
-    wp_enqueue_script( 'wprt-toastify-min-js', 'https://cdn.jsdelivr.net/npm/toastify-js', array(), '1.0.1', true );
+add_action( 'admin_enqueue_scripts', 'ntfy_admin_enqueue_scripts' );
+
+function ntfy_admin_enqueue_scripts() {
+    if ( isset( $_GET['page'] ) && $_GET['page'] === 'ntfy' ) {
+        wp_enqueue_script('jquery');
+        wp_enqueue_style( 'ntfy-style', plugin_dir_url( __FILE__ ) . 'build/index.css' );
+        wp_enqueue_style( 'ntfy-style-admin', plugin_dir_url( __FILE__ ) . 'assets/css/ntfy_style.css' );
+        wp_enqueue_style( 'ntfy-toastify-min-css', plugin_dir_url( __FILE__ ) . 'assets/css/ntfy_toastify.min.css');
+        wp_enqueue_script( 'ntfy-script', plugin_dir_url( __FILE__ ) . 'build/index.js', array( 'wp-element' ), '1.0.0', true );
+        wp_enqueue_script( 'ntfy-toastify-min-js', plugin_dir_url( __FILE__ ) . 'assets/js/ntfy.toastify.js', array(), '1.0.0', true );
+}
+}
+function ntfy_frontend_enqueue_scripts() {
+        wp_enqueue_script('jquery');
+        wp_enqueue_style( 'ntfy-style', plugin_dir_url( __FILE__ ) . 'build/index.css' );
+        wp_enqueue_style( 'ntfy-style-admin', plugin_dir_url( __FILE__ ) . 'assets/css/ntfy_style.css' );
+        wp_enqueue_style( 'ntfy-toastify-min-css', plugin_dir_url( __FILE__ ) . 'assets/css/ntfy_toastify.min.css');
+        wp_enqueue_script( 'ntfy-script', plugin_dir_url( __FILE__ ) . 'build/index.js', array( 'wp-element' ), '1.0.0', true );
+        wp_enqueue_script( 'ntfy-toastify-min-js', plugin_dir_url( __FILE__ ) . 'assets/js/ntfy.toastify.js', array(), '1.0.0', true );
 }
 ?>

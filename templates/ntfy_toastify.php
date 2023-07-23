@@ -1,14 +1,15 @@
 <?php
-
+// If this file is called directly, abort.
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly      
 /**
- * wprt_toastify function return the toastify notification
+ * ntfy_toastify function return the toastify notification
  *
  * @return void
  */
 
-function wprt_toastify($atts) {
+function ntfy_toastify($atts) {
     $a = shortcode_atts( array(
-        'id' => 'wprt_toast',
+        'id' => 'ntfy_toast',
         'message' => 'Thank You for using Ninja Toastify!',
         'button_font_size'=>'14px',
         'button_background'=>'llinear-gradient(to right, rgb(16 44 60), rgb(0, 148, 255))',
@@ -59,7 +60,7 @@ function wprt_toastify($atts) {
  * @return void
  */
 
-add_shortcode('ninja_toastify', 'wprt_toastify');
+add_shortcode('ninja_toastify', 'ntfy_toastify');
     
 
 ?>

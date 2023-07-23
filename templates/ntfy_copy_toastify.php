@@ -1,14 +1,15 @@
 <?php
-
+// If this file is called directly, abort.
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly      
 /**
- * wprt_toastify_copied function return the toastify notification and copy the text
+ * ntfy_toastify_copied function return the toastify notification and copy the text
  *
  * @return void
  */
 
-function wprt_toastify_copied($atts, $content = null) {
+function ntfy_toastify_copied($atts, $content = null) {
     $a = shortcode_atts( array(
-        'id' => 'wprt_toast_copied',
+        'id' => 'ntfy_toast_copied',
         'message' => 'Text copied!',
         'button_font_size'=>'14px',
         'button_background'=>'linear-gradient(to right, rgb(16 44 60), rgb(0, 148, 255))',
@@ -63,7 +64,7 @@ function wprt_toastify_copied($atts, $content = null) {
  * @return void
  */
 
-add_shortcode('ninja_toastify_copied', 'wprt_toastify_copied');
+add_shortcode('ninja_toastify_copied', 'ntfy_toastify_copied');
     
 
 ?>
