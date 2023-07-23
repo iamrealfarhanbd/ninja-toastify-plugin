@@ -29,7 +29,7 @@ You can customize the appearance of the notification by passing in options as pr
 
 = Can I display multiple notifications at once? =
 
-Yes, the React Toastify library allows you to display multiple notifications at once. You can control how many notifications are displayed by adding the different `id`.
+Yes, the Ninja Toastify library allows you to display multiple notifications at once. You can control how many notifications are displayed by adding the different `id`.
 
 == Changelog ==
 
